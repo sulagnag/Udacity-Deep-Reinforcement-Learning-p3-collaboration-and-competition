@@ -1,8 +1,10 @@
 # Udacity-Deep-Reinforcement-Learning-p3-collaboration-and-competition
-
-## The problem 
 The goal of the project is to train the Tennis environment. The environment is based on Unity ML-agents.
+
 ![](images/tennis.png)
+
+
+## The problem description
 
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
@@ -15,7 +17,7 @@ This yields a single score for each episode.
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 
-## Getting Started
+## Getting Started - installation
 For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
 
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
@@ -24,4 +26,9 @@ Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/
 Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
 
 ## Execution
-The configuration for the environement, the agent and the DDPG parameters are mentioned in the config file
+Clone the repository onto your system.
+The configuration for the environement, the agent and the DDPG parameters are mentioned in the config file.
+Execute the .ipynb file
+
+## Acknowledgements
+I need to thank rlcode for the sumtree.py [link](https://github.com/rlcode/per/blob/master/SumTree.py)
