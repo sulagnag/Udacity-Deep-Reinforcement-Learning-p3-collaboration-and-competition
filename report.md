@@ -13,7 +13,7 @@ First model
 5. Ornstein-Uhlenbeck noise with mu=0, theta=.15 and sigma=0.5
 
 Second model
-MADDPG algorithm
+MADDPG algorithm with critics receiving full obs set
 1. Two DDPG agents with critics receving the full observation set
 2. Shared replay buffer from which each critic sample experiences.
 3. Actor Critic model with 2 hidden layers 400,300 dim each with drop out layers
