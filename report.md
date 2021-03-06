@@ -1,7 +1,7 @@
 # Udacity-Deep-Reinforcement-Learning-p3-collaboration-and-competition - Tennis environemnt
 
 ## The solution
-This tennis environment can be seen as an extension of the reacher environment where 20 agents were trained all together. In this case we have to train 2 agents.
+This tennis environment can be seen as an extension of the reacher environment where 20 agents were trained all together using DDPG. In this case we have to train 2 agents.
 A good place to start is therefore the DDPG algorithm with 2 agents. 
 
 ### Initial experiments
