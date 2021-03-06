@@ -54,6 +54,10 @@ Once the actor and critic networks being trained are updated, the target network
 8. gamma = 0.99
 
 
+##Ideas for future work
+I would like to solve this environment with MADDPG where the critics share the full set of obs of all agents.
+Another implementation that i wish to try is with C-51 Categorical distribution where the critic outputs a probability distribution of Q values instead of one value.
+
 
 
 
