@@ -1,5 +1,5 @@
 # Udacity-Deep-Reinforcement-Learning-p3-collaboration-and-competition
-The goal of the project is to train the Tennis environment. The environment is based on Unity ML-agents.
+The goal of the project is to train the two players(agents) in the Tennis environment. The environment is based on Unity ML-agents.
 
 ![](images/tennis.png)
 
