@@ -31,4 +31,4 @@ The configuration for the environement, the agent and the DDPG parameters are me
 Execute the .ipynb file
 
 ## Acknowledgements
-I need to thank rlcode for the sumtree.py [link](https://github.com/rlcode/per/blob/master/SumTree.py)
+Thank you to rlcode for the sumtree.py [link](https://github.com/rlcode/per/blob/master/SumTree.py)
