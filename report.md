@@ -14,16 +14,16 @@ First model
 
 Second model
 MADDPG algorithm
-1. 2 DDPG agents with critics receving the full observation set
+1. Two DDPG agents with critics receving the full observation set
 2. Shared replay buffer from which each critic sample experiences.
 3. Actor Critic model with 2 hidden layers 400,300 dim each with drop out layers
 4. Local and target models for both actor and critic with soft updates
 5. Ornstein-Uhlenbeck noise with mu=0, theta=.15 and sigma=0.5
 
-Wit the both the above models, I couldn't train the model succesfully. The avg score over 100 consecutive episodes would increase to max 0.01 and then decrease. The cycle would just continue for greater number of episodes.
+I was unsuccessful in training both the above models with diff hyperparameter values and model dimensions. The avg score over 100 consecutive episodes would increase to max 0.01 and then decrease. The cycle would just continue for greater number of episodes.
 
 ### final implementation
-Intuitively, it felt that the agents needed to learn from the good actions (those rewarded positively) more frequently, and PER (prioritised replay buffer) is just perfect for that.
+Intuitively, it felt that the agents needed to learn from the good actions (those rewarded positively) more frequently, and PER (prioritised replay buffer) is perfect for that.
 
 ### Prioritised Replay buffer
 The original replay buffer allows us to perform uniform sampling with no preference for better samples. Prioritised replay buffer allows us to assign priorities based on the amount of learning that is possible from a sample. The sample with higher learning scope (TD error in this case)gets a higher priority.
@@ -34,7 +34,7 @@ A sideeffect of this priority based samples is the bias added towards these samp
 Using the PER along with the 2 DDPG agents i could solve the environment in 1677 episodes.
 ![](images/avg_scores_graph.png)
 
-### Delayed updates
+### Delayed updates to the target network
 The actor and critic networks learn every 10 timesteps and every learning step is repeated 5 times with 5 differnt samples.
 Once the actor and critic networks being trained are updated, the target networks are updated with a soft update.
 
