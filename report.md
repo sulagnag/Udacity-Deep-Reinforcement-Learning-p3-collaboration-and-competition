@@ -28,13 +28,12 @@ Using the PER along with the 2 DDPG agents i could solve the environment in 1677
 
 ### Hyperparameters
 1. buffer = 100000
-2. batch_size = 128
+2. batch_size = 96
 3. tau = 0.02
 4. lr_actor = 1e-4
 5. lr_critic = 1e-4
 6. w_decay = 0
-7. update_every = 10 , 5 times
-8. gamma = 0.99
+7. gamma = 0.99
 
 
 ##Ideas for future work
