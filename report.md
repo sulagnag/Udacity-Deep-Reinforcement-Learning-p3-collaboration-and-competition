@@ -12,31 +12,14 @@ First model
 4. local and target models for both actor and critic with soft updates
 5. Ornstein-Uhlenbeck noise with mu=0, theta=.15 and sigma=0.5
 
-Second model
-MADDPG algorithm with critics receiving full obs set
-1. Two DDPG agents with critics receving the full observation set
-2. Shared replay buffer from which each critic sample experiences.
-3. Actor Critic model with 2 hidden layers 400,300 dim each with drop out layers
-4. Local and target models for both actor and critic with soft updates
-5. Ornstein-Uhlenbeck noise with mu=0, theta=.15 and sigma=0.5
-
-I was unsuccessful in training both the above models with diff hyperparameter values and model dimensions. The avg score over 100 consecutive episodes would increase to max 0.01 and then decrease. The cycle would just continue for greater number of episodes.
 
 ### final implementation
-Intuitively, it felt that the agents needed to learn from the good actions (those rewarded positively) more frequently, and PER (prioritised replay buffer) is perfect for that.
 
-### Prioritised Replay buffer
-The original replay buffer allows us to perform uniform sampling with no preference for better samples. Prioritised replay buffer allows us to assign priorities based on the amount of learning that is possible from a sample. The sample with higher learning scope (TD error in this case)gets a higher priority.
 
-In order to order the samples as per priority and keep updating the tree with new priorities, we use **Sum Trees**. I used the sumtree.py from rlcode.
-A sideeffect of this priority based samples is the bias added towards these samples. The samples with lower priority(Error) may not be sampled for a long time. To overcome this,  we update the network weights are based on not just the TD error(gradient) but also the importance sampling weight for the experiences.
 
 Using the PER along with the 2 DDPG agents i could solve the environment in 1677 episodes.
 ![](images/avg_scores_graph.png)
 
-### Delayed updates to the target network
-The actor and critic networks learn every 10 timesteps and every learning step is repeated 5 times with 5 differnt samples.
-Once the actor and critic networks being trained are updated, the target networks are updated with a soft update.
 
 ### The Actor Critic Models
 1. Two Hidden layers with dimensions 400, 300 respectively and dropout layers with p=0.5
@@ -55,9 +38,10 @@ Once the actor and critic networks being trained are updated, the target network
 
 
 ##Ideas for future work
-I would like to solve this environment with MADDPG where the critics share the full set of obs of all agents.
-Another implementation that i wish to try is with C-51 Categorical distribution where the critic outputs a probability distribution of Q values instead of one value.
-
+1. Solve the environment in fewer episodes
+2. Try the Prioritised Replay Buffer
+3. Try the MADDPG implementation with critics receiving the full observations and actions
+4. Observe the improvements with the categorical distribution - C51 algorithm
 
 
 
