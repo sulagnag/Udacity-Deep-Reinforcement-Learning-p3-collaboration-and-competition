@@ -17,7 +17,7 @@ First model
 
 
 
-Using the PER along with the 2 DDPG agents i could solve the environment in 1677 episodes.
+Using the PER along with the 2 DDPG agents i could solve the environment in 161 episodes.
 ![](images/avg_scores_graph_DDPG.png)
 
 
@@ -28,7 +28,7 @@ Using the PER along with the 2 DDPG agents i could solve the environment in 1677
 
 ### Hyperparameters
 1. buffer = 100000
-2. batch_size = 96
+2. batch_size = 128
 3. tau = 0.02
 4. lr_actor = 1e-4
 5. lr_critic = 1e-4
