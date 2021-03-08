@@ -22,7 +22,7 @@ A good place to start is therefore the DDPG algorithm with 2 agents.
 7. gamma = 0.99
 
 The environment was solved in 323 episodes.
-![](images/avg_scores_graph_DDPG.png)
+![](images/avg_scores_graph.png)
 
 
 ##Ideas for future work
