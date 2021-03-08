@@ -18,7 +18,7 @@ First model
 
 
 Using the PER along with the 2 DDPG agents i could solve the environment in 1677 episodes.
-![](images/avg_scores_graph.png)
+![](images/avg_scores_graph_DDPG.png)
 
 
 ### The Actor Critic Models
@@ -37,10 +37,9 @@ Using the PER along with the 2 DDPG agents i could solve the environment in 1677
 
 
 ##Ideas for future work
-1. Solve the environment in fewer episodes
-2. Try the Prioritised Replay Buffer
-3. Try the MADDPG implementation with critics receiving the full observations and actions
-4. Observe the improvements with the categorical distribution - C51 algorithm
+1. Observe improvements with the Prioritised Replay Buffer
+2. Try the MADDPG implementation with critics receiving the full observations and actions
+3. Observe the improvements with the categorical distribution - C51 algorithm
 
 
 
