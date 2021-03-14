@@ -6,7 +6,7 @@ The goal of the project is to train the two players(agents) in the Tennis enviro
 
 ## The problem description
 
-**The Env:** In this environment, two agents control rackets to bounce a ball over a net. 
+**The Environment:** In this environment, two agents control rackets to bounce a ball over a net. 
 
 **Observation space:** The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
@@ -20,14 +20,40 @@ After each episode, we add up the rewards that each agent received (without disc
 
 
 ## Getting Started - installation
-1.Python packages
-  a. pyhhon 3
-  b. numpy
-  c. torchvision
-  d. pandas
-  e. matplotlib
+  
+1. Dependencies
+To set up your python environment to run the code in this repository, follow the instructions below.
 
-2. For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
+Create (and activate) a new environment with Python 3.6.
+
+Linux or Mac:
+conda create --name drlnd python=3.6
+source activate drlnd
+Windows:
+conda create --name drlnd python=3.6 
+activate drlnd
+Follow the instructions in this repository to perform a minimal install of OpenAI gym.
+
+Next, install the classic control environment group by following the instructions here.
+Then, install the box2d environment group by following the instructions here.
+Clone the repository (if you haven't already!), and navigate to the python/ folder. Then, install several dependencies.
+
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+Create an IPython kernel for the drlnd environment.
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+Before running code in a notebook, change the kernel to match the drlnd environment by using the drop-down Kernel menu.
+Kernel
+
+2. Python packages
+  a. numpy
+  b. torchvision
+  c. pandas
+  d. matplotlib
+
+
+3. For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
 
 * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
 * Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
