@@ -22,11 +22,11 @@ After each episode, we add up the rewards that each agent received (without disc
 ## Getting Started - installation
   
 1. Python packages
-  a. python 3.6
-  b. numpy
-  c. torchvision
-  d. pandas
-  e. matplotlib
+* a. python 3.6
+* b. numpy
+* c. torchvision
+* d. pandas
+* e. matplotlib
   
 2.  Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
 ```bash
